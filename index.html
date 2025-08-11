@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      color: #ff4081;
+    }
+
+    .video {
+      margin: 30px 0;
+    }
+
+    .shayari, .year-wish {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 700px;
+      font-style: italic;
+      animation: fadeIn 2s ease-in;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-in;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ✅ Mobile Responsive Styling */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .shayari, .year-wish {
+        padding: 15px;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎂 Heading -->
+  <h1 class="fade-in">🎉 Hurray! Happy Birthday, My Love! 💖</h1>
+  <p class="fade-in">Today is the most special day, because it's the day you came into this world — and eventually into my life. I’m so grateful for you every single day. ❤️</p>
+
+  <!-- 🎥 Video -->
+  <div class="video">
+    <h2 class="fade-in">🎥 A Little Something for You</h2>
+    <video controls>
+      <source src="birthday_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- 💌 Shayari -->
+  <div class="shayari">
+    <h2>💌 My Feelings for You</h2>
+    <p>
+      Every moment with you is a dream come true,<br>
+      Today, I celebrate the amazing you.<br>
+      Your laughter is a melody, your smile a ray,<br>
+      May your birthday be as beautiful as you today. <br>
+      You’re my forever, my one and only,<br>
+      Happy birthday, my love, I’m so lucky to call you mine. 💞
+    </p>
+  </div>
+
+  <!-- 🌟 Year Wish -->
+  <div class="year-wish">
+    <h2>🌟 Wishing You the Best Year Ahead</h2>
+    <p>
+      May this year bring you endless joy, success, love, and unforgettable memories.<br>
+      I’ll be right here with you for every moment. Let’s make this year the most magical one yet. ✨💑
+    </p>
+  </div>
+
+  <!-- 💌 Signature -->
+  <p style="margin-top: 50px;">With all my love,<br><strong>Mubarak</strong></p>
+
+  <!-- 🎊 Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Confetti burst on page load
+    window.onload = () => {
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+
+</body>
+</html>
